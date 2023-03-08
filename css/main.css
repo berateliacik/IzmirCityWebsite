@@ -1,0 +1,1130 @@
+/* GENERAL SETTINGS */
+@font-face {
+    font-family:'Raleway'; /*  yazı fontunun ismini belirledik  */ 
+    src:url('../fonts/Raleway-Regular.ttf'); /* fontumuzu çağırdık   */ 
+    
+}
+
+body{
+    background: #fff; /*  sitemizin arkaplan rengini beyaz olarak ayarladık.  */
+    color: #3f3f3f; /*  sitemizin genel temasında orta kısımda bulunan mavi renkli başlık kutucuklarının altta bulunan çizgi kodu   */
+    font:14px / 28px arial; /*   sitenin ikinci yazı fontu ve onun boyutunu belirledik */
+    font-family: 'Raleway';  /*  siteniin genel yazı fontunun adını  belirledik  */
+    
+}
+h1{
+    font-size:40px; /*  sitemizin çoğunlukla her sayfasında bulunan resmin üzerine gelen yazının boyutu   */
+    letter-spacing: 4px; /*  h1 başlıklı yazılar arasındaki harf boşlukları  */
+    margin-bottom: 20px; /*  alttan boşluk belirleme  */
+}
+
+.sectionHeader{
+    background: #64a2cf;   /*  kutucuklarının arkplan rengi  */
+    border-bottom: 6px solid #000; /* kutucukların altındaki çizgiyi belirledik    */
+    height: 60px; /* kutucuk yüksekliği    */
+    color: #fff;  /*  yazı rengi beyaz olarak belirledik  */
+    display: inline-block; /*   kutucuğu oluşturan yapı. yazının etrafında bi kutu şekli almasını sağladık */
+    line-height: 60px; /*  yazı arası satır boşluğu  */
+    font-size: 24px; /*  yazı büyüklüğü  */
+    padding: 5px 40px; /*  sağdan ve soldan boşluk bırakma  */
+    letter-spacing: 1px; 
+    margin-bottom: 20px;
+    
+}
+
+h3{
+    font-size: 16px; /*  h3 başlıklarının yazı boyutunu belirledik  */ 
+    color: #64a2cf;  /* h3 başlıklarının rengi    */ 
+    transition: all .5s ease;  
+}
+
+.sectionArea{
+    padding: 80px 0;
+}
+
+/* GRID SETTINGS */
+
+.container {
+    width: 90%; /*   belirlediğimiz alanın büyüklüğü */
+    margin: 0 auto; /* ortalamayı sağlar   */
+    display: flex; /* oranın o kutuya ait olduğpunu belirtir   */
+}
+
+.featuresBody .container { 
+    justify-content: space-between; /* ilk öğe başlangıç ile aynı hizada, son son ile aynı hizada */ 
+    
+}
+.col3{
+    flex-grow: 1; /*  kutu haline getirdik */ 
+    width: 33.33%; /*   col3 bolumunu 3 kutuya eşit böldük  */ 
+}
+
+.engineBody .container{
+    justify-content: space-between;
+}
+
+.col2 {
+    flex-grow: 1;
+    width: 50%; /*  iki kutumuz olduğu için 2 ye böldük  */ 
+    padding: 20px;
+    
+}
+
+/* HOME SETTINGS */
+
+
+header .logo{
+    margin-right: auto; /* logomuzu sağ tarafa aldık   */ 
+}
+
+header .logo img{
+    display: block;
+    height: 70px; /*  logo yüsekliğini belirledik  */ 
+}
+
+.menu li{
+    float: left;
+}
+.menu li a{
+    padding: 27px 17px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color:#333;
+    transition: all .3s ease; /*   mouse ile menunun üsütne gelince 0.3 saniyede şekil değiştirmesi */ 
+}
+.menu li: last-child {
+    padding-right: 0;
+}
+.menu li:hover a{
+    background: #64a2cf; /*  menu üstüne gelince renk mavi oluyor  */ 
+    color: #fff; /* menu üstüne gelince  yazı beyaz oluyor  */ 
+}
+#mainSlider{
+    height: 500px; /* slider yükseliği 500 px olarak belirledik   */ 
+    background: url('../img/mainHome.jpg') center center no-repeat; /* css üzeriden resmimimizi çağırdık    */ 
+    background-size: cover;
+    
+}
+
+.slider{
+    width: 100%;
+}
+#mainCaption{
+    height: 500px;
+    background: rgba(0,0,0, .4); /*  slider ın stüne siyah renkte opsitesi 0.4 olan bi katman getirdk  */ 
+}
+.caption{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #fff;
+}
+
+.featuresTop{
+    text-align: center;
+}
+.item{
+    padding: 10px 20px;
+}
+
+.zoom{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    
+}
+
+.zoom img{
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all .5s ease;
+    
+}
+
+.item .itemText{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #64a2cf;
+}
+
+.item:hover .zoom img {
+    transform: scale(1.25);
+}
+
+.item:hover h3{
+    color: #fff;
+    
+}
+
+.item:hover .itemText{
+    background: #64a2cf;
+    color: #fff;
+    transition: all .5s ease;
+    
+}
+
+.btnDetails{
+    color: #64a2cf;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #64a2cf;
+    transition: all .5s ease;
+}
+
+.item:hover .btnDetails{
+    color: #fff;
+    border:1px solid #fff;
+    
+}
+.itemText p {
+    margin: 20px 0;
+    
+}
+
+
+
+#parallax{   /* anasayfada aşağı inerken arkaplanda resmin yukarı doğru kaymasını sağlayan kod kısmı   */ 
+    background: linear-gradient(
+                rgba(0,0,0, .7),
+                rgba(0,0,0,.7)
+                ),
+                url('../img/parallax.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    
+}
+
+#parallax p {
+    color: #fff;
+    
+}
+
+.engineTop {
+    text-align: center;
+    
+}
+
+.engineContainer {
+    position: relative;
+    width: 100%;
+    
+}
+
+.imageOver {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+}
+
+.engineOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(100,162,207,.5);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    
+}
+
+
+.engineContainer:hover .engineOverlay {
+    width: 100%;
+    
+}
+
+
+.engineText {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.engineOverlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(100,162,207,.5);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    
+}
+
+.engineContainer:hover .engineOverlay2 {
+    width: 100%;
+    left:0;
+}
+
+footer {
+    background: #64a2cf;
+    text-align: center;
+}
+
+.footerItem {
+    padding: 20px;
+    
+}
+
+.footerItem img {
+    height: 50px;
+   /* opacity: .7;*/
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    
+}
+
+footer .fa { /*   en lattaki sosyal medya iconları ile ilgili bölüm */ 
+    font-size: 30px;  /*  medya iconlarının boyutunu 30px olarak belirledik  */ 
+    color: #fff;  /*  medya iconlarının rengini beyaz yaptık  */ 
+    line-height: 50px;
+    transition: .3s ease;
+    
+}
+
+footer .fa:hover {
+    color: #e4e4e4;
+}
+
+
+footer p {
+    color: #fff; /* her sayfamızın en alt kısmında bulunan footer daki yazı rengini belrledik  */ 
+/*   line-height: 20px; */
+}
+
+.footerLinks a {
+    text-decoration: none; /*  linklerimizin altındaki çizgiyi kaldırdık  */
+    color: #fff; 
+    letter-spacing: 1px; /*  harf aralıkları 1px  */
+    transition: .3s ease;
+    
+}
+
+.footerLinks a:hover { 
+    color: #e4e4e4; /*  mouse ile linkin üstüne gelince rengi gri tonlarında yaptık  */
+    text-decoration: underline; /*  mouse ile linkin üstüne gelince altını çiz dedik   */
+}
+
+
+
+.socialLinks li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    
+}
+
+#blogSlider{
+    height: 350px;
+    background: url('../img/mainBlog.jpg') center center no-repeat;  /*  resmin urlsini css ile getirdik   */
+    background-size: cover;
+    
+}
+
+#blogCaption{
+    height: 350px; /*  sliderin yüksekliğini belirledik    */
+    background: rgba(0,0,0, .5); /*   sliderin opasitesini belirledik  */
+}
+
+#inspect {
+    background-color: #f5f5f5; /*  sayfamıızın arkpaln rengini belirledik   */
+    
+}
+
+.inspectTop{
+    text-align: center; /*  yazıyı ortaladık   */
+    
+}
+
+.inspectBody .col2 {
+    display: flex;
+}
+
+.inspectImage {
+    width: 50%;  
+    
+}
+
+.inspectImage img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.inspectText {
+    width: 50%;
+    padding-left: 10px;
+    
+}
+
+
+h4 {
+    color: #64a2cf; /* h4 başlıklarının rengini belirledik    */
+    font-size: 14px; /* h4 başlıklarının yazı boyutunu belirledik    */
+    font-weight: bold;
+    
+}
+
+.inspectText a {
+    float: right;
+    text-decoration: none;
+    color: #64a2cf
+}
+
+.inspectText a:hover {
+    text-decoration: underline;
+}
+
+#yemekSlider{
+    height: 350px;
+    background: url('../img/yemekSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#yemekCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+
+.yemekText h2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #64a2cf;
+}
+
+.yemekText p {
+    padding-right: 4440px;
+}
+
+.yemekbolumu {
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.yemekresmi {
+    float:right;
+    padding: 0 0px 0px 0;
+    width: 30%;
+    border-radius: 20px
+    
+}
+
+
+
+.yemekText p {
+    padding-right: 500px;
+}
+
+
+
+#ulasimSlider{
+    height: 350px;
+    background: url('../img/izmirulasim.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#ulasimCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.ulasimharitasi {
+    width:1400px; /*  resmimimiz çok büyük olduğu için sayfamıza sığdırdık   */
+    height: auto; /*   yüksekliği otomatik belirledik  */
+  display: table;
+  position: relative;
+  overflow: hidden;
+  text-align:center;
+  margin:0 auto; /*   resmi ortaladık  */
+}
+
+
+#aboutSlider{
+    height: 350px;
+    background: url('../img/izmirhakkinda.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#aboutCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+
+.hakkindaText {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 100px;
+}
+
+
+
+#tarihiyerSlider{
+    height: 350px;
+    background: url('../img/tarihiyerlerSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#tarihiyerCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+
+.tarihiBody .col2 {
+    display: flex;
+}
+
+.tarihiImage {
+    width: 50%;
+    
+}
+
+.tarihiImage img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.tarihiText {
+    width: 50%;
+    padding-left: 10px;
+}
+
+
+#rotalarSlider{
+    height: 350px;
+    background: url('../img/rotalarSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#rotalarCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.rotalarText {
+  
+padding-right: 100px; /*  yazıya sağdan verdiğimiz boşluk   */
+    
+    padding-left: 40px; /* yazıya soldan verdiğimiz boşluk    */
+}
+
+#gunlukgeziSlider{
+    height: 350px;
+    background: url('../img/gunlukbergama.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#gunlukgeziCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+#gunlukgezicesmeSlider{
+    height: 300px;
+    background: url('../img/gunlukcesme.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#gunlukgezicesmeCaption{
+    height: 300px;
+    background: rgba(0,0,0, .5);
+}
+
+
+#gunlukgeziefesSlider{
+    height: 300px;
+    background: url('../img/gunlukefes.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#gunlukgeziefesCaption{
+    height: 300px;
+    background: rgba(0,0,0, .5);
+}
+
+
+
+#gunlukgezikskSlider{
+    height: 300px;
+    background: url('../img/gunlukkarsiyaka.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#gunlukgezikskCaption{
+    height: 300px;
+    background: rgba(0,0,0, .5);
+}
+
+#gunlukgeziefesCaption{
+    height: 300px;
+    background: rgba(0,0,0, .5);
+}
+
+
+
+#gunlukgezikonakSlider{
+    height: 300px;
+    background: url('../img/gunlukkonak.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#gunlukgezikonakCaption{
+    height: 300px;
+    background: rgba(0,0,0, .5);
+}
+
+
+#gunlukgeziseferiSlider{
+    height: 300px;
+    background: url('../img/gunlukseferi.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#gunlukgeziseferiCaption{
+    height: 300px;
+    background: rgba(0,0,0, .5);
+}
+
+#gunlukgeziurlaSlider{
+    height: 300px;
+    background: url('../img/gunlukurla.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#gunlukgeziurlaCaption{
+    height: 300px;
+    background: rgba(0,0,0, .5);
+}
+
+
+.gunlukgeziText {
+    padding-left: 40px;
+    width: 80%;
+    
+}
+
+
+.gunlukgeziText h2 {
+    font-weight: bold;
+    color: #64a2cf;
+    
+}
+
+.engineText .btnDetails {
+    color: #fff;
+    
+}
+
+
+#plajSlider{
+    height: 350px;
+    background: url('../img/izmirplaj.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#plajCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.plajText {
+    padding-left: 40px;
+    width: 80%;
+    
+        
+}
+
+.plajText h2 {
+    color: #64a2cf;
+    font-weight: bold; /*   h2 yazıalrımızın kalınlığını arttırdık  */
+    
+}
+
+
+
+
+
+
+#kampSlider{
+    height: 350px;
+    background: url('../img/izmirkamp.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#kampCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.kampText {
+    padding-left: 40px;
+    width: 80%;
+    
+        
+}
+
+.kampText h2 {
+    color: #64a2cf;
+    font-weight: bold;
+    
+}
+
+
+
+
+
+#tarihievSlider{
+    height: 350px;
+    background: url('../img/tarihievlerSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#tarihievCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.tarihievText {
+    padding-left: 40px; /* yazıya soldan verdiğimiz boşluk    */
+    width: 80%; /* yazının büyüklüğünü belirledik     */
+    
+        
+}
+
+.tarihievText h2 {
+    color: #64a2cf; /* yazının rengini belirledik    */
+    font-weight: bold; /*  yazının kalınlığını arttırdık   */
+    
+}
+
+
+
+
+
+
+#ataturkSlider{
+    height: 350px;
+    background: url('../img/ataturkveizmirSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#ataturkCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.ataturkText {
+    padding-left: 40px;
+    width: 80%;
+    
+        
+}
+
+.ataturkText h2 {
+    color: #64a2cf;
+    font-weight: bold;
+    
+}
+
+
+
+
+#filozofSlider{
+    height: 350px;
+    background: url('../img/izmirfilozofSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#filozofCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.filozofText {
+    padding-left: 40px;
+    width: 80%;
+    
+        
+}
+
+.filozofText h2 {
+    color: #64a2cf;
+    font-weight: bold;
+    
+}
+
+
+
+
+#izmiryasamSlider{
+    height: 350px;
+    background: url('../img/izmiryasamSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#izmiryasamCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.izmiryasamText {
+    padding-left: 40px;
+    width: 80%;
+    
+        
+}
+
+.izmiryasamText h2 {
+    color: #64a2cf;
+    font-weight: bold;
+    
+}
+
+
+
+#izmirgeceSlider{
+    height: 350px;
+    background: url('../img/izmirgeceSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#izmirgeceCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.izmirgeceText {
+    padding-left: 40px;
+    width: 80%;
+    
+        
+}
+
+.izmirgeceText h2 {
+    color: #64a2cf;
+    font-weight: bold;
+    
+}
+
+
+
+#izmirparkSlider{
+    height: 350px;
+    background: url('../img/izmirparkSlider.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+
+#izmirparkCaption{
+    height: 350px;
+    background: rgba(0,0,0, .5);
+}
+
+.izmirparkText {
+    padding-left: 40px;
+    width: 80%;
+    
+        
+}
+
+.izmirparkText h2 {
+    color: #64a2cf;
+    font-weight: bold;
+    
+}
+
+
+
+
+
+
+
+
+/* sitemizi mobil uyumlu hale getirmek için gerekli kod kısmı*/
+
+
+
+
+
+
+@media screen and (max-width: 960px) {  /* ekran boyutu 960px yaptığımız sitemizin görünmesini istediğimiz özellikleri yazdık */
+    .caption h1 {
+        font-size: 30px;
+        letter-spacing: 1px;
+        
+    }
+    
+    .caption p {
+        font-size: 14px; /*   sitemiz mobil uyumlu olsun diye yazı boyutumuzu küçülttük  */
+    }
+    
+    footer h3 {
+        font-size: 16px; /*   sitemiz mobil uyumlu olsun diye yazı boyutumuzu küçülttük  */ /*     */
+    }
+    
+    footer p {
+        font-size: 14px; /*   sitemiz mobil uyumlu olsun diye yazı boyutumuzu küçülttük  */
+        
+        
+    }
+    
+    footer .fa {
+        font-size: 24px; /*   sitemiz mobil uyumlu olsun diye sosyal medya iconlarının  boyutumuzu küçülttük  */
+    }
+    .inspectBody .container {
+        flex-direction: column; /*   yanyana olan kısımları mobilde güzel görünüme kavuşturmak için alt alta aldık  */
+        
+
+    }
+    
+    
+    .inspectBody .container .col2 { /*  alt alta aldığımız kısım küçük durduğu için onun boyutunu 100% yaptık   */
+        width: 100%;
+        
+    }
+    
+    .tarihiBody .container {
+        flex-direction: column;
+        
+    }
+    
+    .tarihiBody .container .col2 {
+        width: 100%;
+        
+    }
+    
+    .yemekText p {
+        padding-right: 280px; /* yemekler bölümümüzdeki bozulmaları düzeltmek ve mobil görünümüme kavuşturmak için     */
+    }
+    
+    .ulasimharitasi { /*   ulaşım resmimizi küçülttük ekrana sığması için  */
+    width:900px;
+    height: auto;
+    }
+}
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    @media screen and (max-width: 720px) {  /* ekran boyutu 720px yaptığımız sitemizin görünmesini istediğimiz özellikleri yazdık*/
+        
+        header .container {            /*  menuleri logonun altına orta kısıma aldık */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+    header .logo {
+            margin: 0 auto; /* daha hoş görünüm için logomuzu sağnanın ortasına aldık     */
+            
+        }
+        
+     .caption h1 {
+        font-size: 22px; /*    başlıkların boyutunu küçülttük  */
+        letter-spacing: 0px; /*  harfler arası boşlukları düşürdüm   */
+        
+    }
+        
+        
+    .featuresBody .container {
+            flex-direction: column;
+        
+        }
+        
+    .featuresBody .container .col3 {
+        width: 80%;
+        margin: 0 auto;  /* burada col3 kısmını ortaladık   */
+        
+        }
+        
+     .engineBody .container {
+            flex-direction: column; /*   yan yana olan kısmı sütun halinde alt alta kelmesini sağladık   */
+            
+        }
+        .engineBody .container .col2 {
+            width: 80%;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 auto;
+            
+        }
+        
+        footer .container {
+            flex-direction: column;
+            
+        }
+        footer .container .col3 {
+            width: 100%;
+            
+        }
+        
+        .sectionHeader {
+            font-size: 20px;
+            
+        }
+        
+        .inspectBody .container .col2 {
+            padding-left: 0;
+            padding-right: 0; 
+        }
+        
+        .yemekText p {
+            width: 100%;
+    
+        }
+
+        .yemekbolumu {
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .yemekresmi {
+            width: 40%;
+            margin-top: 50px;
+    
+        }
+
+        .ulasimharitasi {
+            width:700px;
+            height: auto;
+        }
+            
+        .menu {
+            font-size: 11px;
+            
+        }
+    }
+
+
+
+
+
+
+
+
+        @media screen and (max-width: 540px) {    /* ekran boyutu 540px yaptığımız sitemizin görünmesini istediğimiz özellikleri yazdık*/
+            
+            
+            .caption h1 {
+                font-size: 18px;
+                letter-spacing: 0px;
+                }
+           
+            .caption p {
+                font-size: 11px;
+            }
+            .ulasimharitasi {
+                width:500px;
+                height: auto;
+                }
+            
+            .sectionHeader {
+                font-size: 18px;
+                
+            }
+            
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
