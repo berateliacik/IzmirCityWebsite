@@ -36,4 +36,7 @@ cd IzmirCityWebsite
 ## Screenshots 
 
 ![resim](https://user-images.githubusercontent.com/57050210/223798217-c59cedbe-e1d5-4181-88a3-a5b5f7101e34.png)
+![resim](https://user-images.githubusercontent.com/57050210/223798861-4c557452-534e-4a29-a767-7fb9bdac0f82.png)
+![resim](https://user-images.githubusercontent.com/57050210/223799200-d5acb360-915e-4557-9261-6270347e7bb1.png)
+
 
