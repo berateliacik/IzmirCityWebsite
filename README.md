@@ -32,3 +32,8 @@ cd IzmirCityWebsite
 ```
 
 3. Open the 'index.html' file in a browser.
+
+## Screenshots 
+
+![resim](https://user-images.githubusercontent.com/57050210/223798217-c59cedbe-e1d5-4181-88a3-a5b5f7101e34.png)
+
